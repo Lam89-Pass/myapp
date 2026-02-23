@@ -6,32 +6,21 @@ interface CardProps {
   category?: string;
 }
 
-export default function Card({ title, description, tags, link, category }: CardProps) {
+export default function Card({ title, description, tags, category }: any) {
   return (
-    <div className="group bg-white rounded-3xl p-6 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-      {category && (
-        <span className="text-[10px] font-bold uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
-          {category}
-        </span>
-      )}
-      <h3 className="text-xl font-bold text-slate-900 mt-4 mb-2 group-hover:text-blue-600 transition-colors">
-        {title}
-      </h3>
-      <p className="text-slate-600 text-sm leading-relaxed mb-6">
-        {description}
-      </p>
-      <div className="flex flex-wrap gap-2 mb-6">
-        {tags?.map((tag) => (
-          <span key={tag} className="text-[11px] font-medium text-slate-500 bg-slate-100 px-2 py-1 rounded-md">
-            #{tag}
+    <div className="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-start text-left">
+      <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 text-2xl">
+        {category === 'Game' ? '🎮' : '💻'}
+      </div>
+      <h3 className="text-2xl font-bold text-[#202124] mb-3">{title}</h3>
+      <p className="text-[#5f6368] text-sm leading-relaxed mb-6">{description}</p>
+      <div className="flex flex-wrap gap-2 mt-auto">
+        {tags?.map((tag: string) => (
+          <span key={tag} className="text-[11px] font-bold uppercase tracking-wider text-google-blue bg-blue-50 px-3 py-1 rounded-full">
+            {tag}
           </span>
         ))}
       </div>
-      {link && (
-        <a href={link} className="text-sm font-semibold text-blue-600 flex items-center gap-2 hover:underline">
-          Lihat Detail <span>→</span>
-        </a>
-      )}
     </div>
   );
 }

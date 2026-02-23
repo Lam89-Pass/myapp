@@ -1,54 +1,88 @@
 import React from 'react';
-// Import komponen Button agar tidak terjadi ReferenceError
-import Button from "../ui/Button";
 
-interface HeroProps {
-  contact: {
-    name: string;
-    nickname: string;
-    bio: string;
-  };
-}
-
-export default function Hero({ contact }: HeroProps) {
+export default function Hero({ contact }: { contact: any }) {
+  const name = contact?.name || "Muhamad Nur Salam";
+  
   return (
-    <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 px-6 text-center overflow-hidden min-h-[80vh] flex flex-col justify-center">
-      {/* Konten Utama */}
-      <div className="relative z-10 max-w-4xl mx-auto">
-        <h1 className="text-5xl md:text-8xl font-bold tracking-tight text-slate-900 mb-6 drop-shadow-sm">
-          {contact.name}
-        </h1>
+    <section id="home" className="relative pt-40 md:pt-44 pb-20 overflow-hidden min-h-[85vh] flex items-center">
+      <div className="w-[95%] max-w-5xl mx-auto relative z-10 flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-8">
         
-        <p className="text-xl md:text-2xl text-slate-600 mb-12 leading-relaxed max-w-2xl mx-auto">
-          {contact.bio} 
-          <span className="block mt-2 font-medium text-blue-600">
-            Teknik Informatika Universitas Pasundan
-          </span>
-        </p>
+        {/* KOLOM KIRI: Tipografi & SEO Copywriting */}
+        <div className="flex-1 text-center md:text-left">
+          
+          {/* Badge Interaktif dengan Efek Pulse (Menarik Perhatian) */}
+          <div className="group inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-blue-50/80 border border-blue-100 hover:bg-blue-100 transition-colors cursor-default">
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-google-blue opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-google-blue"></span>
+            </span>
+            <span className="text-google-blue font-bold text-xs tracking-wide uppercase">
+              Tersedia untuk Kolaborasi & Proyek
+            </span>
+          </div>
+          
+          {/* H1 SEO Friendly: Menggunakan Gradient Text agar sangat menonjol */}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-2 leading-tight text-[#202124]">
+            Halo, Saya <br className="hidden md:block" />
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
+              {name}
+            </span>
+          </h1>
+          
+          {/* H2 Pendukung SEO: Menjelaskan siapa kamu untuk mesin pencari */}
+          <h2 className="text-xl md:text-2xl font-semibold text-slate-700 mb-5">
+            Tech Enthusiast & IT Student
+          </h2>
+          
+          {/* Paragraf dengan tag <strong> untuk Keyword SEO */}
+          <p className="text-lg text-[#5f6368] mb-8 max-w-xl mx-auto md:mx-0 leading-relaxed">
+            Mahasiswa <strong className="text-google-blue font-semibold">Teknik Informatika Universitas Pasundan</strong>. Berfokus pada pengembangan <strong className="text-slate-800 font-medium">Web Development</strong>, eksplorasi <strong className="text-slate-800 font-medium">Keamanan Siber</strong>, dan <strong className="text-slate-800 font-medium">Game Creation</strong>.
+          </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button text="Lihat Proyek" link="#projects" variant="primary" />
-          <Button text="Hubungi Saya" link="#contact" variant="outline" />
+          {/* Tombol Interaktif dengan Efek Shadow Glow & Hover Lift */}
+          <div className="mt-8 flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+            <a 
+              href="#projects" 
+              aria-label="Lihat Proyek Portofolio Muhamad Nur Salam"
+              className="bg-google-blue text-white px-8 py-3.5 rounded-full font-bold shadow-[0_4px_14px_0_rgba(26,115,232,0.39)] hover:shadow-[0_6px_20px_rgba(26,115,232,0.23)] hover:-translate-y-1 transition-all duration-300"
+            >
+              Lihat Karya Saya
+            </a>
+            <a 
+              href="#about" 
+              aria-label="Baca Profil Muhamad Nur Salam"
+              className="bg-white text-slate-700 border border-slate-200 px-8 py-3.5 rounded-full font-bold shadow-sm hover:border-google-blue hover:text-google-blue hover:-translate-y-1 transition-all duration-300"
+            >
+              Tentang Saya
+            </a>
+          </div>
         </div>
-      </div>
 
-      {/* Dekorasi Ikon Melayang (GSA Style) */}
-      {/* Ikon-ikon ini menggunakan class animate-float yang sudah kita buat di globals.css */}
-      <div className="hidden md:block absolute top-1/4 left-10 lg:left-32 text-6xl animate-float pointer-events-none">
-        🚀
-      </div>
-      <div className="hidden md:block absolute top-1/3 right-10 lg:right-32 text-6xl animate-float [animation-delay:1s] pointer-events-none">
-        🛡️
-      </div>
-      <div className="hidden md:block absolute bottom-20 left-20 lg:left-48 text-6xl animate-float [animation-delay:1.5s] pointer-events-none">
-        🎮
-      </div>
-      <div className="hidden md:block absolute bottom-32 right-20 lg:right-48 text-6xl animate-float [animation-delay:0.5s] pointer-events-none">
-        💻
-      </div>
+        {/* KOLOM KANAN: Foto Hero (Optimasi Interaktif & SEO) */}
+        <div className="flex-1 relative flex justify-center md:justify-end lg:justify-center mt-10 md:mt-0">
+          <div className="relative inline-block group">
+            
+            {/* Frame Foto dengan hover shadow 2xl */}
+            <div className="relative z-10 bg-white p-2 md:p-3 rounded-2xl shadow-xl rotate-3 group-hover:rotate-0 transition-all duration-500 hover:shadow-2xl">
+              <img 
+                src="/assets/profile.png" 
+                // Alt text yang kaya keyword untuk Google Image Search
+                alt="Foto Profil Muhamad Nur Salam, Mahasiswa Teknik Informatika UNPAS" 
+                width="340"
+                height="340"
+                className="w-full max-w-[280px] md:max-w-[340px] rounded-xl shadow-inner object-cover bg-slate-50"
+              />
+            </div>
 
-      {/* Efek Blur Dekoratif di Background */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-3xl max-h-[400px] bg-blue-100/30 blur-[120px] rounded-full -z-10"></div>
+            {/* Emojis Interaktif (Bisa membesar jika di-hover kursor) */}
+            <div className="absolute -top-6 -left-6 md:-top-8 md:-left-8 text-4xl md:text-5xl animate-float drop-shadow-md z-20 hover:scale-125 transition-transform cursor-default" title="Web Development">💻</div>
+            <div className="absolute -top-4 -right-4 md:-top-6 md:-right-6 text-4xl md:text-5xl animate-float [animation-delay:1s] drop-shadow-md z-20 hover:scale-125 transition-transform cursor-default" title="Inovasi">✨</div>
+            <div className="absolute -bottom-6 -left-6 md:-bottom-8 md:-left-8 text-4xl md:text-5xl animate-float [animation-delay:2s] drop-shadow-md z-20 hover:scale-125 transition-transform cursor-default" title="Cyber Security">🛡️</div>
+            <div className="absolute -bottom-6 -right-6 md:-bottom-8 md:-right-8 text-4xl md:text-5xl animate-float [animation-delay:0.5s] drop-shadow-md z-20 hover:scale-125 transition-transform cursor-default" title="Game Creation">🚀</div>
+          </div>
+        </div>
+
+      </div>
     </section>
   );
 }

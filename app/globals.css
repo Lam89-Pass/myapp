@@ -1,28 +1,27 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
-  --background: #f8faff;
-  --foreground: #3c4043;
+/* Menghubungkan konfigurasi kustom jika diperlukan */
+@config "../tailwind.config.ts";
+
+@theme {
+  --color-google-blue: #1a73e8;
+  --color-background: #f8faff;
+  
+  @keyframes floating {
+    0%, 100% { transform: translateY(0) rotate(2deg); }
+    50% { transform: translateY(-15px) rotate(-1deg); }
+  }
+}
+
+@utility animate-float {
+  animation: floating 4s ease-in-out infinite;
 }
 
 body {
-  color: var(--foreground);
-  background-color: var(--background);
-  /* Grid Background ala GSA */
+  @apply text-[#3c4043] bg-background scroll-smooth;
+  /* Grid Background Biru Halus ala GSA */
   background-image: 
     linear-gradient(to right, #d1e3ff 1px, transparent 1px),
-    linear-gradient(to bottom, #d1e3ff_1px, transparent 1px);
+    linear-gradient(to bottom, #d1e3ff 1px, transparent 1px);
   background-size: 40px 40px;
-  scroll-behavior: smooth;
-}
-
-@keyframes floating {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-15px); }
-}
-
-.animate-float {
-  animation: floating 3s ease-in-out infinite;
 }
