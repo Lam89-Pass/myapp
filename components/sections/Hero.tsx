@@ -7,7 +7,7 @@ export default function Hero({ contact }: { contact: any }) {
     <section id="home" className="relative pt-40 md:pt-44 pb-20 overflow-hidden min-h-[85vh] flex items-center">
       <div className="w-[95%] max-w-5xl mx-auto relative z-10 flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-8">
         
-        <div className="flex-1 text-center md:text-left">
+        <div data-aos="fade-right" className="flex-1 text-center md:text-left">
                     <div className="group inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-blue-50/80 border border-blue-100 hover:bg-blue-100 transition-colors cursor-default">
             <span className="relative flex h-3 w-3">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-google-blue opacity-75"></span>
@@ -50,7 +50,7 @@ export default function Hero({ contact }: { contact: any }) {
           </div>
         </div>
 
-        <div className="flex-1 relative flex justify-center md:justify-end lg:justify-center mt-10 md:mt-0">
+        <div data-aos="fade-left" className="flex-1 relative flex justify-center md:justify-end lg:justify-center mt-10 md:mt-0">
           <div className="relative inline-block group">
             
             <div className="relative z-10 bg-white p-2 md:p-3 rounded-2xl shadow-xl rotate-3 group-hover:rotate-0 transition-all duration-500 hover:shadow-2xl">

@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ScrollToTop from '@/components/ui/ScrollToTop';
+import AosInit from "@/components/AosInit";
 
 export const metadata: Metadata = {
   title: {
@@ -31,7 +32,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="id" className="scroll-smooth">
-      <body className="antialiased">
+      <body className="antialiased bg-white text-slate-900">
+        <AosInit />
         <Navbar />
         {children}
         <Footer />

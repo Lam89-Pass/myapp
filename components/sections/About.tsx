@@ -76,7 +76,7 @@ export default function About() {
   const data = aboutData;
 
   return (
-    <section id="about" aria-label="Tentang Muhamad Nur Salam" className="relative py-24 px-6 max-w-6xl mx-auto">
+    <section data-aos-delay="200" id="about" aria-label="Tentang Muhamad Nur Salam" className="relative py-24 px-6 max-w-6xl mx-auto">
       
       {/* TENTANG SAYA */}
       <div className="bg-white/80 backdrop-blur-xl rounded-[2rem] p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white mb-16 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500 relative overflow-hidden group">
@@ -95,7 +95,7 @@ export default function About() {
 
       {/* PENDIDIKAN & PENGALAMAN */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-20">
-        <div>
+        <div data-aos="fade-right">
           <div className="flex items-center gap-3 mb-8 px-2">
             <span className="text-2xl bg-blue-50 p-2 rounded-xl text-blue-600">🎓</span>
             <h3 className="text-2xl font-bold text-[#202124]">Pendidikan & Aktivitas</h3>
@@ -106,7 +106,7 @@ export default function About() {
             ))}
           </div>
         </div>
-        <div>
+        <div data-aos="fade-left">
           <div className="flex items-center gap-3 mb-8 px-2">
             <span className="text-2xl bg-blue-50 p-2 rounded-xl text-blue-600">💼</span>
             <h3 className="text-2xl font-bold text-[#202124]">Pengalaman Kerja</h3>
@@ -128,8 +128,7 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           
           {/* Hard Skills */}
-          <div className="bg-white/80 backdrop-blur-md p-7 rounded-3xl border border-white shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
-            <div className="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform">💻</div>
+          <div data-aos="fade-up" className="bg-white/80 backdrop-blur-md p-7 rounded-3xl border border-white shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
             <h4 className="text-xl font-bold text-slate-800 mb-4">Hard Skills</h4>
             <div className="flex flex-wrap gap-2">
               {data.skills.hardSkills.map((skill: string) => (
@@ -141,8 +140,7 @@ export default function About() {
           </div>
 
           {/* Soft Skills */}
-          <div className="bg-white/80 backdrop-blur-md p-7 rounded-3xl border border-white shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
-            <div className="w-12 h-12 bg-emerald-50 rounded-full flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform">🤝</div>
+          <div data-aos="fade-up" className="bg-white/80 backdrop-blur-md p-7 rounded-3xl border border-white shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
             <h4 className="text-xl font-bold text-slate-800 mb-4">Soft Skills</h4>
             <div className="flex flex-wrap gap-2">
               {data.skills.softSkills.map((skill: string) => (
@@ -154,8 +152,7 @@ export default function About() {
           </div>
 
           {/* Tools */}
-          <div className="bg-white/80 backdrop-blur-md p-7 rounded-3xl border border-white shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
-            <div className="w-12 h-12 bg-amber-50 rounded-full flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform">🛠️</div>
+          <div data-aos="fade-up" className="bg-white/80 backdrop-blur-md p-7 rounded-3xl border border-white shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
             <h4 className="text-xl font-bold text-slate-800 mb-4">Tools & Tech</h4>
             <div className="flex flex-wrap gap-2">
               {data.skills.tools.map((tool: string) => (

@@ -30,7 +30,7 @@ export default function Projects({ projects = [] }: ProjectsProps) {
   return (
     <section id="projects" className="relative py-24 px-6 max-w-7xl mx-auto" aria-labelledby="projects-heading">
       
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+      <div data-aos-delay="200" className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
         <div className="max-w-2xl">
           <h2 id="projects-heading" className="text-4xl font-extrabold text-[#202124] tracking-tight mb-4">
             Proyek Pilihan
@@ -60,7 +60,7 @@ export default function Projects({ projects = [] }: ProjectsProps) {
         )}
       </div>
 
-      <div 
+      <div  data-aos-delay="200"
         ref={scrollRef}
         className="flex gap-8 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-8 -mx-2 px-2"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
