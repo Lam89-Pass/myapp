@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from 'react';
-import ThemeToggle from "@/components/ui/ThemeToggle";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

@@ -3,7 +3,6 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ScrollToTop from '@/components/ui/ScrollToTop';
-import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
   title: {
@@ -31,20 +30,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    // Wajib tambah suppressHydrationWarning di tag html jika pakai next-themes
-    <html lang="id" className="scroll-smooth" suppressHydrationWarning>
-      <body className="antialiased bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 transition-colors duration-300">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Navbar />
-          {children}
-          <Footer />
-          <ScrollToTop />
-        </ThemeProvider>
+    <html lang="id" className="scroll-smooth">
+      <body className="antialiased">
+        <Navbar />
+        {children}
+        <Footer />
+        
+        <ScrollToTop />
       </body>
     </html>
   );

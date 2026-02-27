@@ -7,15 +7,16 @@ export const aboutData = {
       title: "S1 Teknik Informatika",
       subtitle: "Universitas Pasundan",
       location: "Bandung, Indonesia",
-      date: "2023 - Sekarang",
+      date: "2024 - Sekarang",
       icon: "🏫",
       highlight: "Indeks Prestasi Kumulatif (IPK): 3.55 / 4.00",
       listTitle: "Pencapaian & Organisasi:",
       listItems: [
-        { icon: "🏆", text: "Google Developer Group (GDG) on Campus UNPAS - The Best Project (2025)" },
+        { icon: "🤝", text: "Google Developer Group on Campus UNPAS - Staf Departemen Event" },
+        { icon: "🏆", text: "Google Developer Group on Campus UNPAS - The Best Project (2025)" },
         { icon: "🏅", text: "HMTIF Universitas Pasundan - Web Terbaik (2025)" },
         { icon: "🤝", text: "Patriot Pelajar Mahasiswa - Volunteer KIP Kuliah (2025)" },
-        { icon: "💡", text: "BYPAS Community - Founder & Mentor Study Club" },
+        { icon: "💡", text: "BYPAS Community - Ketua Divisi Sosial Media Study Club" },
       ]
     },
     {
@@ -23,15 +24,14 @@ export const aboutData = {
       title: "Teknik Komputer dan Jaringan",
       subtitle: "SMK Negeri 1 Cidaun",
       location: "Cianjur, Indonesia",
-      date: "Lulus 2023",
+      date: "Lulus 2024",
       icon: "🖥️",
       highlight: "Nilai Akhir: 87.42 / 100",
       description: "Mempelajari dasar-dasar infrastruktur jaringan, perakitan komputer, administrasi server, serta troubleshooting perangkat keras dan lunak.",
       listTitle: "Pencapaian & Organisasi:",
       listItems: [
-        { icon: "🏅", text: "Peserta Lomba Kompetensi Siswa (LKS) TKJ" },
-        { icon: "🤝", text: "Anggota Aktif OSIS Sekbid Teknologi Informasi" },
-        { icon: "💻", text: "Ketua Ekstrakurikuler Komputer/Jaringan" }
+        { icon: "🤝", text: "Ketua OSIS periode 2023/2024" },
+        { icon: "🏅", text: "Ketua Ekstrakurikuler Pencak Silat" }
       ]
     }
   ],
@@ -42,7 +42,7 @@ export const aboutData = {
       title: "Roblox Developer",
       subtitle: "KDS Studios",
       location: "Work From Home",
-      date: "Jan 2024 - Sekarang",
+      date: "Jul 2025 - Oct 2025",
       icon: "🎮",
       description: "Bertanggung jawab atas seluruh siklus pengembangan map game di platform Roblox.",
       listItems: [
@@ -56,7 +56,7 @@ export const aboutData = {
       title: "Teknisi Komputer",
       subtitle: "Bandung Electronic Center",
       location: "Bandung, Indonesia",
-      date: "Jul 2023 - Des 2023",
+      date: "Jan 2023 - Mar 2023",
       icon: "🔧",
       listItems: [
         "Melakukan diagnosa akurat, service, dan maintenance pada berbagai merek perangkat keras laptop maupun PC.",

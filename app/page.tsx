@@ -5,11 +5,9 @@ import Projects from "@/components/sections/Projects";
 import Kegiatan from "@/components/sections/kegiatan";
 import Articles from "@/components/sections/Articles"; 
 import Contact from "@/components/sections/Contact";
-import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   const activityImages = PortfolioService.getActivityImages();
-  
   const articles = PortfolioService.getArticles(); 
 
   return (
@@ -17,11 +15,7 @@ export default function Home() {
       <div className="relative z-10">
         <Hero contact={PortfolioService.getContact()} />
         
-        <About 
-          education={PortfolioService.getEducation()} 
-          organizations={PortfolioService.getExperience()} 
-          skills={PortfolioService.getSkills()} 
-        />
+        <About />
         
         <Kegiatan images={activityImages} />
         
@@ -29,7 +23,7 @@ export default function Home() {
 
         <Articles articles={articles} />
         
-<Contact contact={PortfolioService.getContact()} />
+        <Contact />
 
       </div>
     </main>
