@@ -1,5 +1,3 @@
-// data/aboutData.ts
-
 export const aboutData = {
   profileText: "Saya adalah Mahasiswa Teknik Informatika di Universitas Pasundan yang aktif dalam ekosistem pengembang Google dan keamanan siber. Saya menggabungkan kompetensi teknis dengan pengalaman manajemen event teknologi. Berpengalaman menginisiasi dan mengelola seminar, talkshow, serta program edukatif yang tidak hanya informatif, tetapi juga berdampak dan aplikatif. Memiliki minat kuat pada Artificial Intelligence (AI) dan pemanfaatannya untuk meningkatkan produktivitas serta efektivitas pembelajaran. Saya senang belajar hal baru, membangun kolaborasi, dan membagikan wawasan teknologi agar lebih mudah dipahami dan dimanfaatkan secara nyata.",
   
@@ -8,6 +6,7 @@ export const aboutData = {
       id: 1,
       title: "S1 Teknik Informatika",
       subtitle: "Universitas Pasundan",
+      location: "Bandung, Indonesia",
       date: "2023 - Sekarang",
       icon: "🏫",
       highlight: "Indeks Prestasi Kumulatif (IPK): 3.55 / 4.00",
@@ -23,19 +22,27 @@ export const aboutData = {
       id: 2,
       title: "Teknik Komputer dan Jaringan",
       subtitle: "SMK Negeri 1 Cidaun",
+      location: "Cianjur, Indonesia",
       date: "Lulus 2023",
       icon: "🖥️",
       highlight: "Nilai Akhir: 87.42 / 100",
-      description: "Mempelajari dasar-dasar infrastruktur jaringan, perakitan komputer, administrasi server, serta troubleshooting perangkat keras dan lunak."
+      description: "Mempelajari dasar-dasar infrastruktur jaringan, perakitan komputer, administrasi server, serta troubleshooting perangkat keras dan lunak.",
+      listTitle: "Pencapaian & Organisasi:",
+      listItems: [
+        { icon: "🏅", text: "Peserta Lomba Kompetensi Siswa (LKS) TKJ" },
+        { icon: "🤝", text: "Anggota Aktif OSIS Sekbid Teknologi Informasi" },
+        { icon: "💻", text: "Ketua Ekstrakurikuler Komputer/Jaringan" }
+      ]
     }
   ],
 
   experience: [
     {
       id: 1,
-      title: "Game Developer",
+      title: "Roblox Developer",
       subtitle: "KDS Studios",
-      date: "Work From Home",
+      location: "Work From Home",
+      date: "Jan 2024 - Sekarang",
       icon: "🎮",
       description: "Bertanggung jawab atas seluruh siklus pengembangan map game di platform Roblox.",
       listItems: [
@@ -48,7 +55,8 @@ export const aboutData = {
       id: 2,
       title: "Teknisi Komputer",
       subtitle: "Bandung Electronic Center",
-      date: "Bandung, Indonesia",
+      location: "Bandung, Indonesia",
+      date: "Jul 2023 - Des 2023",
       icon: "🔧",
       listItems: [
         "Melakukan diagnosa akurat, service, dan maintenance pada berbagai merek perangkat keras laptop maupun PC.",

@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-/* Menghubungkan konfigurasi kustom jika diperlukan */
 @config "../tailwind.config.ts";
 
 @theme {
@@ -11,17 +10,26 @@
     0%, 100% { transform: translateY(0) rotate(2deg); }
     50% { transform: translateY(-15px) rotate(-1deg); }
   }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
 }
 
-@utility animate-float {
-  animation: floating 4s ease-in-out infinite;
+@utility animate-marquee-slow {
+  animation: marquee 60s linear infinite;
 }
 
 body {
   @apply text-[#3c4043] bg-background scroll-smooth;
-  /* Grid Background Biru Halus ala GSA */
   background-image: 
     linear-gradient(to right, #d1e3ff 1px, transparent 1px),
     linear-gradient(to bottom, #d1e3ff 1px, transparent 1px);
   background-size: 40px 40px;
+}
+
+.marquee-container {
+  display: flex;
+  width: max-content;
 }

@@ -3,35 +3,34 @@ import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import Projects from "@/components/sections/Projects";
 import Kegiatan from "@/components/sections/kegiatan";
+import Articles from "@/components/sections/Articles"; 
 import Contact from "@/components/sections/Contact";
+import Footer from "@/components/layout/Footer";
 
 export default function Home() {
-  // Inisialisasi Service untuk ambil data dari backend/data/
-  const service = new PortfolioService();
+  const activityImages = PortfolioService.getActivityImages();
   
+  const articles = PortfolioService.getArticles(); 
+
   return (
     <main className="relative">
-      {/* Wrapper tambahan untuk background biar konten lebih pop-up */}
       <div className="relative z-10">
-        <Hero 
-          contact={service.getContact()} 
+        <Hero contact={PortfolioService.getContact()} />
+        
+        <About 
+          education={PortfolioService.getEducation()} 
+          organizations={PortfolioService.getExperience()} 
+          skills={PortfolioService.getSkills()} 
         />
         
-<About 
-  education={service.getEducation()} 
-  organizations={service.getExperience()} // Pastikan ini mengambil data dari experience.ts yang berisi Techinnovation/BYPAS
-  skills={service.getSkills()} 
-/>
+        <Kegiatan images={activityImages} />
         
-        <Kegiatan 
-          experiences={service.getExperience()} 
-        />
+        <Projects projects={PortfolioService.getProjects()} />
+
+        <Articles articles={articles} />
         
-        <Projects 
-          projects={service.getProjects()} 
-        />
-        
-        <Contact />
+<Contact contact={PortfolioService.getContact()} />
+
       </div>
     </main>
   );

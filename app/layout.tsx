@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Muhamad Nur Salam | Portfolio",
     description: "Mahasiswa Teknik Informatika UNPAS & Game Developer.",
-    url: "https://googlestudentambassador.id", // Ganti dengan domainmu nanti
+    url: "https://googlestudentambassador.id",
     siteName: "Portfolio Muhamad Nur Salam",
     locale: "id_ID",
     type: "website",

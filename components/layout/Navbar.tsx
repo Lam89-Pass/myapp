@@ -15,9 +15,7 @@ export default function Navbar() {
 
   return (
     <div className="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-5xl z-50">
-      <nav className="bg-white/80 backdrop-blur-md border border-white/20 shadow-lg rounded-full px-5 md:px-8 py-2.5 md:py-3 flex justify-between items-center transition-all duration-300">
-        
-        {/* Logo ditarik lebih ke kiri dengan -ml-2 md:-ml-5 */}
+      <nav className="bg-white/80 backdrop-blur-md border border-white/20 shadow-lg rounded-full px-5 md:px-8 py-2.5 md:py-3 flex justify-between items-center transition-all duration-300">     
         <a href="#home" className="flex items-center gap-3 cursor-pointer group z-50 -ml-2 md:-ml-5">
           <div className="relative flex items-center justify-center group-hover:scale-105 transition-all duration-300">
             <img 
@@ -31,7 +29,6 @@ export default function Navbar() {
           </span>
         </a>
 
-        {/* Desktop Menu */}
         <ul className="hidden lg:flex gap-8 text-sm font-semibold text-[#5f6368]">
           {navLinks.map((link) => (
             <li key={link.name} className="relative group">
@@ -43,7 +40,6 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Desktop CTA Button ditarik lebih ke kanan dengan lg:-mr-5 */}
         <a 
           href="#contact" 
           className="hidden lg:inline-block bg-google-blue text-white px-7 py-2 md:py-2.5 rounded-full text-sm font-bold shadow-md hover:bg-blue-700 hover:shadow-lg hover:scale-110 active:scale-95 transition-all duration-300 lg:-mr-5"
@@ -51,7 +47,6 @@ export default function Navbar() {
           Hubungi Saya
         </a>
 
-        {/* Hamburger Toggle Button (HP) ditarik ke kanan dengan -mr-2 md:-mr-5 */}
         <button 
           className="lg:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5 z-50 -mr-2 md:-mr-5"
           onClick={() => setIsOpen(!isOpen)}
@@ -63,7 +58,6 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile Menu Dropdown */}
       <div 
         className={`lg:hidden absolute top-[110%] left-0 w-full bg-white/95 backdrop-blur-xl border border-white/20 shadow-xl rounded-2xl overflow-hidden transition-all duration-300 origin-top ${
           isOpen ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0 pointer-events-none'

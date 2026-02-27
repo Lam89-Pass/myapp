@@ -1,9 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-// IMPORT DATA DARI FOLDER BACKEND KAMU
 import { aboutData } from '@/backend/data/aboutData';
-// --- Komponen Interaktif Timeline Accordion ---
 const TimelineItem = ({ item }: { item: any }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -74,23 +72,20 @@ const TimelineItem = ({ item }: { item: any }) => {
   );
 };
 
-// --- Komponen Utama ---
 export default function About() {
-  // Kita langsung menggunakan 'aboutData' yang di-import dari folder data
   const data = aboutData;
 
   return (
     <section id="about" aria-label="Tentang Muhamad Nur Salam" className="relative py-24 px-6 max-w-6xl mx-auto">
       
-      {/* 1. BAGIAN TENTANG SAYA */}
+      {/* TENTANG SAYA */}
       <div className="bg-white/80 backdrop-blur-xl rounded-[2rem] p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white mb-16 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500 relative overflow-hidden group">
         <div className="absolute -top-24 -right-24 w-48 h-48 bg-blue-400/10 rounded-full blur-3xl group-hover:bg-blue-400/20 transition-all duration-500"></div>
         <div className="relative z-10">
           <div className="flex items-center gap-4 mb-6">
-            <div className="w-12 h-12 bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 rounded-2xl flex items-center justify-center text-2xl shadow-sm transform group-hover:-rotate-6 transition-transform">
-              👨‍💻
+            <div className="w-100 h-12 bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 rounded-2xl flex items-center justify-center text-2xl shadow-sm transform group-hover:-rotate-4 transition-transform">
+                <h2 className="text-3xl font-extrabold text-[#202124] tracking-tight">Tentang Saya</h2>
             </div>
-            <h2 className="text-3xl font-extrabold text-[#202124] tracking-tight">Tentang Saya</h2>
           </div>
           <p className="text-lg text-slate-600 leading-relaxed text-justify">
             {data.profileText}
@@ -98,10 +93,8 @@ export default function About() {
         </div>
       </div>
 
-      {/* 2. BAGIAN PENDIDIKAN & PENGALAMAN */}
+      {/* PENDIDIKAN & PENGALAMAN */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-20">
-        
-        {/* Kolom Kiri: Pendidikan */}
         <div>
           <div className="flex items-center gap-3 mb-8 px-2">
             <span className="text-2xl bg-blue-50 p-2 rounded-xl text-blue-600">🎓</span>
@@ -113,8 +106,6 @@ export default function About() {
             ))}
           </div>
         </div>
-
-        {/* Kolom Kanan: Pengalaman */}
         <div>
           <div className="flex items-center gap-3 mb-8 px-2">
             <span className="text-2xl bg-blue-50 p-2 rounded-xl text-blue-600">💼</span>
@@ -128,7 +119,7 @@ export default function About() {
         </div>
       </div>
 
-      {/* 3. BAGIAN SKILLS */}
+      {/* SKILLS */}
       <div className="relative z-10">
         <div className="flex items-center justify-center gap-3 mb-10">
           <h3 className="text-3xl font-extrabold text-[#202124] text-center">Keahlian & Tools</h3>
@@ -136,7 +127,7 @@ export default function About() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           
-          {/* Card 1: Hard Skills */}
+          {/* Hard Skills */}
           <div className="bg-white/80 backdrop-blur-md p-7 rounded-3xl border border-white shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
             <div className="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform">💻</div>
             <h4 className="text-xl font-bold text-slate-800 mb-4">Hard Skills</h4>
@@ -149,7 +140,7 @@ export default function About() {
             </div>
           </div>
 
-          {/* Card 2: Soft Skills */}
+          {/* Soft Skills */}
           <div className="bg-white/80 backdrop-blur-md p-7 rounded-3xl border border-white shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
             <div className="w-12 h-12 bg-emerald-50 rounded-full flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform">🤝</div>
             <h4 className="text-xl font-bold text-slate-800 mb-4">Soft Skills</h4>
@@ -162,7 +153,7 @@ export default function About() {
             </div>
           </div>
 
-          {/* Card 3: Tools */}
+          {/* Tools */}
           <div className="bg-white/80 backdrop-blur-md p-7 rounded-3xl border border-white shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
             <div className="w-12 h-12 bg-amber-50 rounded-full flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform">🛠️</div>
             <h4 className="text-xl font-bold text-slate-800 mb-4">Tools & Tech</h4>
