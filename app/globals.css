@@ -20,6 +20,9 @@
 @utility animate-marquee-slow {
   animation: marquee 60s linear infinite;
 }
+html {
+  scroll-behavior: smooth !important;
+}
 
 body {
   @apply text-[#3c4043] bg-background scroll-smooth;
